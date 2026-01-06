@@ -1,5 +1,0 @@
-- [x] Edit frontend/src/App.css to add sticky positioning and background to the nav selector
-- [x] Update the mobile media query to use sticky instead of unset
-- [x] Move Navbar from HeroSection to Home.jsx before HeroSection
-- [x] Remove Navbar from HeroSection.jsx
-- [x] Test the navbar stickiness after moving it
