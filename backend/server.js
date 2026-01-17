@@ -17,7 +17,7 @@ connectDB();
 // middlewares
 app.use(express.json());
 app.use(cors({
-    origin: [process.env.FRONTEND_URL],
+    origin: [process.env.VITE_FRONTEND_URL],
     methods: ["POST"],
     credentials: true,
     allowedHeaders: ["Content-Type"],
@@ -42,5 +42,8 @@ app.get('/test-db', (req, res) => {
 });
 
 app.use(errorMiddleware);
+
+// export default app; // For Vercel deployment
+export default app;
 
 app.listen(port, () => console.log(`Server started on PORT:${port}`))
