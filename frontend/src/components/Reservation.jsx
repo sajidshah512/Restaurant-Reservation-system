@@ -5,7 +5,9 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
-const backend_URL = "http://localhost:5000/api/v1/reservation/send";
+//const backend_URL = "http://localhost:4000/api/v1/reservation/send";
+
+const backend_URL = import.meta.env.VITE_BACKEND_URL;
 
 const Reservation = () => {
   const [firstName, setFirstName] = useState("");
@@ -27,7 +29,7 @@ const Reservation = () => {
             "Content-Type": "application/json",
           },
           withCredentials: true,
-        }
+        },
       );
       toast.success(data.message);
       setFirstName("");
