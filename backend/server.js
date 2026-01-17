@@ -46,4 +46,4 @@ app.use(errorMiddleware);
 // export default app; // For Vercel deployment
 export default app;
 
-app.listen(port, () => console.log(`Server started on PORT:${port}`))
+// app.listen(port, () => console.log(`Server started on PORT:${port}`))
